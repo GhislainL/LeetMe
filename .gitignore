@@ -3,3 +3,10 @@
 ################################################################################
 
 /LeetMe/bin
+/LeetMe/obj
+/LeetMe.Benchmark/bin
+/LeetMe.Benchmark/obj
+/LeetMe.Sample/bin/
+/LeetMe.Sample/obj
+/.vs/LeetMe/v15/Server/sqlite3
+/.vs
