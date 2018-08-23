@@ -4,134 +4,140 @@ using System;
 
 namespace Benchmark
 {
-    public class BenchLeet
+    [CoreJob]
+    [RPlotExporter, RankColumn]
+    [MemoryDiagnoser]
+    public class BenchNoob
     {
-        LeetMeUp.LeetMeUp LeetMeUpInstance;
-        public BenchLeet()
+        private readonly string sentence;
+
+        private readonly LeetMeUp.LeetMeUp LeetMeUpInstance1 = new LeetMeUp.LeetMeUp();
+        private readonly LeetMeUp.LeetMeUp2 LeetMeUpInstance2 = new LeetMeUp.LeetMeUp2();
+        private readonly LeetMeUp.LeetMeUp3 LeetMeUpInstance3 = new LeetMeUp.LeetMeUp3();
+        private readonly LeetMeUp.LeetMeUp4 LeetMeUpInstance4 = new LeetMeUp.LeetMeUp4();
+
+        public BenchNoob()
         {
-            LeetMeUpInstance = new LeetMeUp.LeetMeUp();
+            sentence = LoremNET.Lorem.Sentence(5, 10);
         }
 
         [Benchmark]
         public string NoobArrayInline()
         {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Noob);
+            return LeetMeUpInstance1.Translate(sentence, LeetMeUp.LeetLevel.Noob);
         }
 
-        [Benchmark]
-        public string LeetArrayInline()
-        {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Leet);
-        }
-
-        [Benchmark]
-        public string RoxxorArrayInline()
-        {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Roxxor);
-        }
-    }
-
-    public class BenchLeet4
-    {
-        LeetMeUp.LeetMeUp4 LeetMeUpInstance;
-        public BenchLeet4()
-        {
-            LeetMeUpInstance = new LeetMeUp.LeetMeUp4();
-        }
-        
         [Benchmark]
         public string NoobArrayDefined()
         {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Noob);
-        }
-
-        [Benchmark]
-        public string LeetArrayDefined()
-        {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Leet);
-        }
-
-        [Benchmark]
-        public string RoxxorArrayDefined()
-        {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Roxxor);
-        }
-    }
-
-    public class BenchLeet2
-    {
-        LeetMeUp.LeetMeUp2 LeetMeUpInstance;
-        public BenchLeet2()
-        {
-            LeetMeUpInstance = new LeetMeUp.LeetMeUp2();
+            return LeetMeUpInstance4.Translate(sentence, LeetMeUp.LeetLevel.Noob);
         }
 
         [Benchmark]
         public string NoobDicoCharArray()
         {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Noob);
-        }
-
-        [Benchmark]
-        public string LeetDicoCharArray()
-        {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Leet);
-        }
-
-        [Benchmark]
-        public string RoxxorDicoCharArray()
-        {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Roxxor);
-        }
-    }
-
-    public class BenchLeet3
-    {
-        LeetMeUp.LeetMeUp3 LeetMeUpInstance;
-        public BenchLeet3()
-        {
-            LeetMeUpInstance = new LeetMeUp.LeetMeUp3();
+            return LeetMeUpInstance2.Translate(sentence, LeetMeUp.LeetLevel.Noob);
         }
 
         [Benchmark]
         public string NoobDicoCharList()
         {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Noob);
-        }
-
-        [Benchmark]
-        public string LeetDicoCharList()
-        {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Leet);
-        }
-
-        [Benchmark]
-        public string RoxxorDicoCharList()
-        {
-            string sentence = LoremNET.Lorem.Sentence(5, 10);
-            return LeetMeUpInstance.Translate(sentence, LeetMeUp.LeetLevel.Roxxor);
+            return LeetMeUpInstance3.Translate(sentence, LeetMeUp.LeetLevel.Noob);
         }
     }
+
+    [CoreJob]
+    [RPlotExporter, RankColumn]
+    [MemoryDiagnoser]
+    public class BenchLeet
+    {
+        private readonly string sentence;
+
+        private readonly LeetMeUp.LeetMeUp LeetMeUpInstance1 = new LeetMeUp.LeetMeUp();
+        private readonly LeetMeUp.LeetMeUp2 LeetMeUpInstance2 = new LeetMeUp.LeetMeUp2();
+        private readonly LeetMeUp.LeetMeUp3 LeetMeUpInstance3 = new LeetMeUp.LeetMeUp3();
+        private readonly LeetMeUp.LeetMeUp4 LeetMeUpInstance4 = new LeetMeUp.LeetMeUp4();
+
+        public BenchLeet()
+        {
+            sentence = LoremNET.Lorem.Sentence(5, 10);
+        }
+
+        [Benchmark]
+        public string NoobArrayInline()
+        {
+            return LeetMeUpInstance1.Translate(sentence, LeetMeUp.LeetLevel.Leet);
+        }
+
+        [Benchmark]
+        public string NoobArrayDefined()
+        {
+            return LeetMeUpInstance4.Translate(sentence, LeetMeUp.LeetLevel.Leet);
+        }
+
+        [Benchmark]
+        public string NoobDicoCharArray()
+        {
+            return LeetMeUpInstance2.Translate(sentence, LeetMeUp.LeetLevel.Leet);
+        }
+
+        [Benchmark]
+        public string NoobDicoCharList()
+        {
+            return LeetMeUpInstance3.Translate(sentence, LeetMeUp.LeetLevel.Leet);
+        }
+    }
+
+    [CoreJob]
+    [RPlotExporter, RankColumn]
+    [MemoryDiagnoser]
+    public class BenchRoxxor
+    {
+        private readonly string sentence;
+
+        private readonly LeetMeUp.LeetMeUp LeetMeUpInstance1 = new LeetMeUp.LeetMeUp();
+        private readonly LeetMeUp.LeetMeUp2 LeetMeUpInstance2 = new LeetMeUp.LeetMeUp2();
+        private readonly LeetMeUp.LeetMeUp3 LeetMeUpInstance3 = new LeetMeUp.LeetMeUp3();
+        private readonly LeetMeUp.LeetMeUp4 LeetMeUpInstance4 = new LeetMeUp.LeetMeUp4();
+
+        public BenchRoxxor()
+        {
+            sentence = LoremNET.Lorem.Sentence(5, 10);
+        }
+
+        [Benchmark]
+        public string NoobArrayInline()
+        {
+            return LeetMeUpInstance1.Translate(sentence, LeetMeUp.LeetLevel.Roxxor);
+        }
+
+        [Benchmark]
+        public string NoobArrayDefined()
+        {
+            return LeetMeUpInstance4.Translate(sentence, LeetMeUp.LeetLevel.Roxxor);
+        }
+
+        [Benchmark]
+        public string NoobDicoCharArray()
+        {
+            return LeetMeUpInstance2.Translate(sentence, LeetMeUp.LeetLevel.Roxxor);
+        }
+
+        [Benchmark]
+        public string NoobDicoCharList()
+        {
+            return LeetMeUpInstance3.Translate(sentence, LeetMeUp.LeetLevel.Roxxor);
+        }
+    }
+
 
     class Program
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<BenchLeet>();
-            var summary2 = BenchmarkRunner.Run<BenchLeet2>();
-            var summary3 = BenchmarkRunner.Run<BenchLeet3>();
-            var summary4 = BenchmarkRunner.Run<BenchLeet4>();
+            var summary1 = BenchmarkRunner.Run<BenchNoob>();
+            var summary2 = BenchmarkRunner.Run<BenchLeet>();
+            var summary3 = BenchmarkRunner.Run<BenchRoxxor>();
 
             Console.ReadLine();
         }
