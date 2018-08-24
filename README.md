@@ -1,5 +1,8 @@
 # LeetMe
 LeetMe is a leet speak translator for .Net Applications. 
+
+![LeetMe](https://github.com/GhislainL/LeetMe/blob/master/LeetMe-180.png)
+
 Dictionnaries are based on :
 * 1337 alphabet from [Leet speak (wikipedia FR)](https://fr.wikipedia.org/wiki/Leet_speak)
 * faux cyrillics from [Faux cyrillique (wikipedia FR)](https://fr.wikipedia.org/wiki/Faux_cyrillique)
