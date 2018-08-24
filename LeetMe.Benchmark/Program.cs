@@ -64,25 +64,25 @@ namespace Benchmark
         }
 
         [Benchmark]
-        public string NoobArrayInline()
+        public string LeetArrayInline()
         {
             return LeetMeInstance1.Translate(sentence, LeetMe.LeetLevel.Leet);
         }
 
         [Benchmark]
-        public string NoobArrayDefined()
+        public string LeetArrayDefined()
         {
             return LeetMeInstance4.Translate(sentence, LeetMe.LeetLevel.Leet);
         }
 
         [Benchmark]
-        public string NoobDicoCharArray()
+        public string LeetDicoCharArray()
         {
             return LeetMeInstance2.Translate(sentence, LeetMe.LeetLevel.Leet);
         }
 
         [Benchmark]
-        public string NoobDicoCharList()
+        public string LeetDicoCharList()
         {
             return LeetMeInstance3.Translate(sentence, LeetMe.LeetLevel.Leet);
         }
@@ -106,25 +106,25 @@ namespace Benchmark
         }
 
         [Benchmark]
-        public string NoobArrayInline()
+        public string RoxxorArrayInline()
         {
             return LeetMeInstance1.Translate(sentence, LeetMe.LeetLevel.Roxxor);
         }
 
         [Benchmark]
-        public string NoobArrayDefined()
+        public string RoxxorArrayDefined()
         {
             return LeetMeInstance4.Translate(sentence, LeetMe.LeetLevel.Roxxor);
         }
 
         [Benchmark]
-        public string NoobDicoCharArray()
+        public string RoxxorDicoCharArray()
         {
             return LeetMeInstance2.Translate(sentence, LeetMe.LeetLevel.Roxxor);
         }
 
         [Benchmark]
-        public string NoobDicoCharList()
+        public string RoxxorDicoCharList()
         {
             return LeetMeInstance3.Translate(sentence, LeetMe.LeetLevel.Roxxor);
         }
