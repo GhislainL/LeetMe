@@ -1,15 +1,16 @@
-# LeetMeUp
-Leet speak translator
-
-base on 1337 alphabet from https://fr.wikipedia.org/wiki/Leet_speak
-
-base on faux cyrillics from https://fr.wikipedia.org/wiki/Faux_cyrillique
+# LeetMe
+LeetMe is a leet speak translator for .Net Applications. 
+Dictionnaries are based on :
+* 1337 alphabet from [Leet speak (wikipedia FR)](https://fr.wikipedia.org/wiki/Leet_speak)
+* faux cyrillics from [Faux cyrillique (wikipedia FR)](https://fr.wikipedia.org/wiki/Faux_cyrillique)
 
 Target : .Net Standard 2.0
 
-LeetMeUp
-LeetMeUp.Benchmark
-LeetMeUp.Sample
+* LeetMeUp : base class
+* LeetMeUp.Benchmark : benchmark of differents structures with [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)
+* LeetMeUp.Sample : sample code 
+
+### Getting started
 
 ```csharp
 string sentence = "The quick brown fox jumps over the lazy dog";
@@ -31,6 +32,6 @@ fauxCyrillic.Translate(sentence)
 // ThЭ qЦick bЯФШИ fФx jЦmps ФvЭЯ thЭ ГДzЧ dФg
 ```
 
+### TODO :
 
-TODO :
-- option for removing diacritics
+* option for removing diacritics
